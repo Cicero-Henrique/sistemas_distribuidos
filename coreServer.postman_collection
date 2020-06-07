@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "b615211f-3086-4ecf-a38f-ce0786694577",
+		"name": "Axios",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "POST AXIOS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"titulo\": \"manos do caixao\",\n    \"descricao\": \"tan tanranram\",\n    \"ano\": 2020\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						},
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/ec021-av2-core/meme",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"ec021-av2-core",
+						"meme"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET AXIOS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						},
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme"
+					]
+				},
+				"description": "Projeto de sistemas distribuidos"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH AXIOS",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"titulo\": \"serjao berranteiro\",\n    \"descricao\": \"matador de onca\",\n    \"ano\": 2012\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						},
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme/5edbe0350f382b1ee4864db3",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme",
+						"5edbe0350f382b1ee4864db3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE AXIOS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
