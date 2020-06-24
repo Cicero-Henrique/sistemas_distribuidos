@@ -1,17 +1,17 @@
 {
-  "name": "projetoAxios",
+  "name": "projeto",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": ""
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.19.2",
+    "mongoose": "^5.9.17",
     "restify": "^8.5.1"
   },
   "devDependencies": {

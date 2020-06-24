@@ -1,22 +1,38 @@
 # Sistemas Distribuidos
-Repositório para desenvolvimento da segunda entrega do projeto de sistemas distribuídos.
+Repositório para desenvolvimento do projeto de sistemas distribuídos.
+
+## Bibliotecas
+[Restify](http://restify.com/)
+```sh
+Uma estrutura otimizada para criar serviços da web REST API.
+```
+
+[Axios](https://github.com/axios/axios)
+```sh
+Utilizada para para realizar as chamadas HTTP.
+```
+
+[Mongoose](https://mongoosejs.com/)
+```sh
+Utilizada para realizar a interação com o banco de dados.
+```
 
 ## Execução
 
 Para executar, é necessário ter o [Node](https://nodejs.org/en/download/) instalado.
 
-Na primeira vez, será necessário instalar os `node_modules` na pasta coreServer:
+Na primeira vez, será necessário instalar os pacotes `node_modules`, ou seja, na pasta CoreServer rode o comando:
 
 ```sh
 npm install
 ```
 
-Para iniciar, abra a pasta `coreServer` e execute:
+Para iniciar a execução, continuando na pasta `CoreServer`, execute:
 
 ```sh
 npm start
 ```
 
-Para testar o middleware inicie um servidor na pasta `middlewareDatabase` (É necessário instalar os `node_modules` na primeira vez) E crie um banco de dados chamado `ec021-av2-core` e uma collection chamada `meme`. Envie requests por meio de aplicações como o Postman na aplicação. Alguns exemplos de collections estão disponíveis nos arquivos .postman_collection.
+Envie requests por meio de aplicações como o Postman na aplicação. Alguns exemplos de collections estão disponíveis nos arquivos .postman_collection.
 
 Para encerrar a execução, aperte `Ctrl + C`.

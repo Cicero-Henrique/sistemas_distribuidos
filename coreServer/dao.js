@@ -1,9 +1,10 @@
 const Meme = require('./database/models/Meme');
 
-async function insert (meme) {
+async function insert(meme) {
     let result = await Meme.create(meme);
     return result;
 }
+
 
 async function list (id) {
     let memes = [];
@@ -17,12 +18,14 @@ async function list (id) {
     return memes;
 }
 
+
 async function update (id, meme) {
-    let result = await Meme.replaceOne({"_id": id}, meme);
+    let result = await Meme.findByIdAndUpdate({"_id": id}, meme);
+    result = await Meme.findById(id);
     return result;
 }
 
-async function deleteCar (id) {
+async function deleteMeme(id) {
     let result = await Meme.findByIdAndDelete({"_id": id});
     return result;
 }
@@ -31,6 +34,6 @@ module.exports = {
     insert,
     list,
     update,
-    deleteCar
+    deleteMeme
 };
 
