@@ -1,108 +1,65 @@
 {
 	"info": {
-		"_postman_id": "b615211f-3086-4ecf-a38f-ce0786694577",
-		"name": "Axios",
+		"_postman_id": "bc4cd2ec-34a7-4b5c-8ba6-3389708414a8",
+		"name": "CoreServer",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
 		{
-			"name": "POST AXIOS",
+			"name": "Login AXIOS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "a9a80a97-435f-4549-b489-4431a774f7a0",
+						"exec": [
+							"var jsonData = pm.response.json();\r",
+							"pm.globals.set(\"token\",jsonData.token)"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
 			"request": {
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"titulo\": \"manos do caixao\",\n    \"descricao\": \"tan tanranram\",\n    \"ano\": 2020\n}",
+					"raw": "{\r\n    \"username\": \"thalis.andrade\",\r\n    \"password\": \"1197\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
-						},
-						"urlencoded": {}
+						}
 					}
 				},
 				"url": {
-					"raw": "localhost:3000/ec021-av2-core/meme",
+					"raw": "localhost:5000/auth/login",
 					"host": [
 						"localhost"
 					],
-					"port": "3000",
+					"port": "5000",
 					"path": [
-						"ec021-av2-core",
-						"meme"
+						"auth",
+						"login"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "GET AXIOS",
-			"protocolProfileBehavior": {
-				"disableBodyPruning": true
-			},
+			"name": "POST AXIOS",
 			"request": {
-				"method": "GET",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "json"
-						},
-						"urlencoded": {}
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
 					}
-				},
-				"url": {
-					"raw": "localhost:5000/meme",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"meme"
-					]
-				},
-				"description": "Projeto de sistemas distribuidos"
-			},
-			"response": []
-		},
-		{
-			"name": "PATCH AXIOS",
-			"request": {
-				"method": "PATCH",
-				"header": [],
+				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n\t\"titulo\": \"serjao berranteiro\",\n    \"descricao\": \"matador de onca\",\n    \"ano\": 2012\n}",
-					"options": {
-						"raw": {
-							"language": "json"
-						},
-						"urlencoded": {}
-					}
-				},
-				"url": {
-					"raw": "localhost:5000/meme/5edbe0350f382b1ee4864db3",
-					"host": [
-						"localhost"
-					],
-					"port": "5000",
-					"path": [
-						"meme",
-						"5edbe0350f382b1ee4864db3"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "DELETE AXIOS",
-			"request": {
-				"method": "DELETE",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
+					"raw": "{\n    \"titulo\": \"Doge\",\n    \"descricao\": \"Part of a series on Interior Monologue Captioning\",\n    \"ano\": 2013\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -121,6 +78,135 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "GET AXIOS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						},
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme/5ef2b823c67fc9337001423c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme",
+						"5ef2b823c67fc9337001423c"
+					]
+				},
+				"description": "Projeto de sistemas distribuidos"
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH AXIOS",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"titulo\": \"Forever Alone\",\n    \"descricao\": \"Part of a series on Rage Comics\",\n    \"ano\": 2010\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						},
+						"urlencoded": {}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme/5ef2b823c67fc9337001423c",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme",
+						"5ef2b823c67fc9337001423c"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE AXIOS",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": \"5ef2b823c67fc9337001423c\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/meme",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"meme"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "a027a788-42e2-4f54-b496-ecc2d2710674",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8fb5b38f-93a6-4f6d-8883-cc105e753613",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"protocolProfileBehavior": {}
