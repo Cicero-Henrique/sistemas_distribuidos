@@ -6,7 +6,7 @@
 	},
 	"item": [
 		{
-			"name": "Login AXIOS",
+			"name": "Login",
 			"event": [
 				{
 					"listen": "test",
@@ -33,11 +33,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/auth/login",
+					"raw": "localhost:3000/auth/login",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "3000",
 					"path": [
 						"auth",
 						"login"
@@ -47,7 +47,7 @@
 			"response": []
 		},
 		{
-			"name": "POST AXIOS",
+			"name": "Create meme",
 			"request": {
 				"method": "POST",
 				"header": [
@@ -67,11 +67,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/meme",
+					"raw": "localhost:3000/meme",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "3000",
 					"path": [
 						"meme"
 					]
@@ -80,7 +80,7 @@
 			"response": []
 		},
 		{
-			"name": "GET AXIOS",
+			"name": "Buscar meme",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
 			},
@@ -104,14 +104,14 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/meme/5ef2b823c67fc9337001423c",
+					"raw": "localhost:3000/meme/",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "3000",
 					"path": [
 						"meme",
-						"5ef2b823c67fc9337001423c"
+						""
 					]
 				},
 				"description": "Projeto de sistemas distribuidos"
@@ -119,7 +119,7 @@
 			"response": []
 		},
 		{
-			"name": "PATCH AXIOS",
+			"name": "Atualizar meme",
 			"request": {
 				"method": "PATCH",
 				"header": [
@@ -140,21 +140,21 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/meme/5ef2b823c67fc9337001423c",
+					"raw": "localhost:3000/meme/5ef51c9874dea7415ce045ff",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "3000",
 					"path": [
 						"meme",
-						"5ef2b823c67fc9337001423c"
+						"5ef51c9874dea7415ce045ff"
 					]
 				}
 			},
 			"response": []
 		},
 		{
-			"name": "DELETE AXIOS",
+			"name": "Excluir meme",
 			"request": {
 				"method": "DELETE",
 				"header": [
@@ -166,7 +166,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"id\": \"5ef2b823c67fc9337001423c\"\r\n}",
+					"raw": "{\r\n    \"id\": \"5ef51c9874dea7415ce045ff\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -174,11 +174,11 @@
 					}
 				},
 				"url": {
-					"raw": "localhost:5000/meme",
+					"raw": "localhost:3000/meme",
 					"host": [
 						"localhost"
 					],
-					"port": "5000",
+					"port": "3000",
 					"path": [
 						"meme"
 					]

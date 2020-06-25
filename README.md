@@ -33,6 +33,6 @@ Para iniciar a execução, continuando na pasta `CoreServer`, execute:
 npm start
 ```
 
-Envie requests por meio de aplicações como o Postman na aplicação. Alguns exemplos de collections estão disponíveis nos arquivos .postman_collection.
+Envie requests por meio de aplicações como o Postman na aplicação. Um exemplo de collection está disponível em coreServer.postman_collection.
 
 Para encerrar a execução, aperte `Ctrl + C`.
