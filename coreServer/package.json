@@ -12,7 +12,7 @@
   "dependencies": {
     "axios": "^1.4.0",
     "mongoose": "^8.7.0",
-    "restify": "^8.5.1"
+    "restify": "^11.1.0"
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
